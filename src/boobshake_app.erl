@@ -62,8 +62,11 @@ process_request_error_test() ->
     {error, _} = process_request(kinky_atom).
 
 process_request_test() ->
-    memory_storage:start_link(),
+     memory_storage:start_link(),
     {ok, _} = process_request({struct, [{<<"set">>, {struct,[{<<"test-key">>, <<"test-val">>}]}}]}),
     {ok, "test-val"} = process_request({struct, [{<<"peek">>, <<"test-key">>}]}).
+
+app_test() ->
+    _ = spawn(fun() -> application:start(boobshake) end).
 
 -endif.
