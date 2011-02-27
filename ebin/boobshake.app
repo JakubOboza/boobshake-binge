@@ -1,0 +1,9 @@
+{application,boobshake,
+             [{description,[]},
+              {vsn,"1"},
+              {modules,[boobshake_app,boobshake_sup,disk_storage,
+                        memory_storage,mochijson2]},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{boobshake_app,[]}},
+              {env,[]}]}.
