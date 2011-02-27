@@ -26,6 +26,19 @@ a) add call that creates new directory `{ create, storage_name } -> ... `
 
 b) add them on the fly if someone requests `{ set , storage_name, key, val } -> ...`
 
+## storage
+different types of tables set, bag, ordered_set
+
+# Usage
+compile and run it using ebin/run.sh or in erlang shell `application:start(boobshake).` then open telnet 127.0.0.1 3666 and start json talk
+eg.
+`{"peek":"name"}`         -> ["error","No such value"]
+`{"set":{"name":"kuba"}}` -> ["ok","value added"]
+`{"peek":"name"}`         -> ["ok", "kuba"]
+
+## ekhm?!
+Application now can only "set" value and "peek"
+
 # Thanks
 
 Thanks to mochiweb team for json module :). Thanks guys, just borrowed it :> and Spec'u for saying i should aim more for Ocaml then Erlang and whole Static vs Dynamic typing conversation.
