@@ -1,4 +1,4 @@
-# Readme : Contents
+# Readme
 This is just a small repo where is play with erlang ;) I used Rebar to work with application and mochiweb mochijson2 module for working with json.
 It's my first erlang project.
 
